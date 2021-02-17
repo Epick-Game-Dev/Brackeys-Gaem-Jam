@@ -22,14 +22,17 @@ public class PickupAndSnap : MonoBehaviour
             Vector3 closestPos = Input.mousePosition;
             foreach (Transform slot in slots)
             {
+                // if the mouse's position is closer to the current slot than the one saved
                 if (Vector3.Distance(cam.ScreenToWorldPoint(Input.mousePosition), (Vector2)slot.position) < Vector3.Distance(cam.ScreenToWorldPoint(Input.mousePosition), closestPos))
                 {
+                    // update closest position
                     Debug.Log(slot.name);
                     closestPos = slot.position;
                     Debug.Log($"Changed position to {closestPos}");
                 }
             }
 
+            // snap
             transform.position = closestPos + (Vector3)offset;
         }
 
