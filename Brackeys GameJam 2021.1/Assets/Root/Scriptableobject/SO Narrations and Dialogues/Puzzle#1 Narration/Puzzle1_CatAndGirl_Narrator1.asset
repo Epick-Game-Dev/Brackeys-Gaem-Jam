@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc23db772a3bbcd409be4e57ba463294, type: 3}
+  m_Name: Puzzle1_CatAndGirl_Narrator1
+  m_EditorClassIdentifier: 
+  narration: Her parents tried to do their best, but these are hard times and its
+    difficult to afford what you want. After all the things they tried, the only
+    choice was to move out. <color=#bf9645>Blinky, the Zoe's cat <color=#000000>was
+    really afraid of all the things that happened in the house. He lived there for
+    6 years, but now feels like every comfortable zone he knew is now gone.

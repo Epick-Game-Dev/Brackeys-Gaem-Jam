@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc23db772a3bbcd409be4e57ba463294, type: 3}
+  m_Name: Puzzle1_CatAndGirl_Narrator2
+  m_EditorClassIdentifier: 
+  narration: He was so afraid of the changes that decide to jump into a tree and
+    hide there. <color=#bf9645>Zoe<color=#000000>, holding back tears is trying to
+    sing <color=#bf9645>Blinky's<color=#000000> favourite song, which could make
+    him get off the tree. But she's so scared and afraid that she can't sing loud
+    enough for Blinky to hear...
