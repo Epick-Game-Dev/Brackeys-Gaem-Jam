@@ -9,7 +9,6 @@ public class KanoodleSlot : MonoBehaviour
 
     private void Awake()
     {
-        slotStatesEnum = SlotStatesEnum.Empty;
         kanoodlePuzzle = GetComponentInParent<KanoodlePuzzle>();
     }
 

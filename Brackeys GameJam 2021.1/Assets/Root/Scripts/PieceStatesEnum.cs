@@ -1,6 +1,6 @@
 ﻿public enum PieceStatesEnum
 {
-    Empty,
-    Full,
+    Free,
+    Following,
     Snapped,
 }
