@@ -35,7 +35,7 @@ public class PieceController : MonoBehaviour
     {
         foreach (Transform piece in transform)
         {
-            Collider2D slot = Physics2D.OverlapCircle(piece.transform.position, 0.5f, slotLayer);
+            Collider2D slot = Physics2D.OverlapCircle(piece.transform.position, piece.GetComponent<CircleCollider2D>().radius, slotLayer);
             if (slot == null)
             {
                 Debug.Log("Can't place here!");
