@@ -5,7 +5,6 @@ using UnityEngine;
 public class KanoodlePuzzle : MonoBehaviour
 {
     [SerializeField] private int slotsToWin;
-    [SerializeField] private Transform[] slots;
 
     private void Awake()
     {
@@ -15,7 +14,7 @@ public class KanoodlePuzzle : MonoBehaviour
     public void UpdateSlotsToWin()
     {
         int count = 0;
-        foreach (Transform slot in slots)
+        foreach (Transform slot in transform)
         {
             KanoodleSlot kanoodleSlot = slot.GetComponent<KanoodleSlot>();
             if (kanoodleSlot.slotStatesEnum != SlotStatesEnum.Snapped)

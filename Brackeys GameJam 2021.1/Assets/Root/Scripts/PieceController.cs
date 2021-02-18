@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class PieceController : MonoBehaviour
 {
+
     [SerializeField] private LayerMask slotLayer;
-    [SerializeField] private Transform[] pieces;
     public PieceStatesEnum pieceStatesEnum;
     private Vector2 originalPosition;
     private Camera _camera;
@@ -26,7 +26,7 @@ public class PieceController : MonoBehaviour
 
     private bool CanIPlaceThisPieceHere()
     {
-        foreach (Transform piece in pieces)
+        foreach (Transform piece in transform)
         {
             Collider2D slot = Physics2D.OverlapCircle(piece.transform.position, piece.GetComponent<CircleCollider2D>().radius, slotLayer);
             if (slot == null)
@@ -44,14 +44,7 @@ public class PieceController : MonoBehaviour
                 Debug.Log("Can't place here!");
                 return false;
             }
-        }
-        foreach (Transform piece in pieces)
-        {
-            Collider2D slot = Physics2D.OverlapCircle(piece.transform.position, piece.GetComponent<CircleCollider2D>().radius, slotLayer);
-            KanoodleSlot kanoodleSlot = slot.GetComponent<KanoodleSlot>();
             kanoodleSlot.slotStatesEnum = SlotStatesEnum.Snapped;
-            kanoodleSlot.UpdateSlots();
-            
         }
         return true;
     }
@@ -66,15 +59,23 @@ public class PieceController : MonoBehaviour
         if (CanIPlaceThisPieceHere())
         {
             pieceStatesEnum = PieceStatesEnum.Snapped;
-            foreach (Transform piece in pieces)
+            int count = 0;
+            foreach (Transform piece in transform)
             {
-                Collider2D slot = Physics2D.OverlapCircle(piece.transform.position, piece.GetComponent<CircleCollider2D>().radius, slotLayer);
-                Transform slotTr = slot.transform;
-                KanoodleSlot kanoodleSlot = slot.GetComponent<KanoodleSlot>();
-                kanoodleSlot.slotStatesEnum = SlotStatesEnum.Snapped;
-                kanoodleSlot.UpdateSlots();
-                piece.transform.position = slotTr.transform.position;
+                count++;
+                Collider2D[] slots = Physics2D.OverlapCircleAll(piece.transform.position, piece.GetComponent<CircleCollider2D>().radius, slotLayer);
+                print(slots.Length);
+                foreach (Collider2D slot in slots)
+                {
+                    print(slot != null);
+                    Transform slotTr = slot.transform;
+                    KanoodleSlot kanoodleSlot = slot.GetComponent<KanoodleSlot>();
+                    kanoodleSlot.slotStatesEnum = SlotStatesEnum.Snapped;
+                    kanoodleSlot.UpdateSlots();
+                    piece.transform.position = slotTr.transform.position;
+                }
             }
+            print(count);
             Debug.Log("The piece is well placed!");
             return;
         }
