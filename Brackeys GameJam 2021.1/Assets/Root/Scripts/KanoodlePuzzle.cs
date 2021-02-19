@@ -4,30 +4,36 @@ using UnityEngine;
 
 public class KanoodlePuzzle : MonoBehaviour
 {
-    [SerializeField] private int slotsToWin;
+    [SerializeField] private int piecesToWin;
+    [SerializeField] private PieceController[] pieces;
 
     private void Awake()
     {
+        piecesToWin++;
         UpdateSlotsToWin();
     }
 
     public void UpdateSlotsToWin()
     {
-        int count = 0;
-        foreach (Transform slot in transform)
+        piecesToWin--;
+        if (piecesToWin <= 0)
         {
-            KanoodleSlot kanoodleSlot = slot.GetComponent<KanoodleSlot>();
-            if (kanoodleSlot.slotStatesEnum != SlotStatesEnum.Snapped)
-            {
-                count++;
-            }
-
+            Debug.Log("You Win!");
         }
-        slotsToWin = count;
-        Debug.Log("Slots to win: " + count);
-        if (slotsToWin <= 0)
+        else
         {
-            Debug.Log("You won!");
+            Debug.Log($"{piecesToWin} pieces left to win.");
+        }
+    }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            foreach (var piece in pieces)
+            {
+                piece.transform.position = piece.originalPosition;
+                piece.pieceStatesEnum = PieceStatesEnum.Free;
+            }
         }
     }
 }

@@ -6,7 +6,7 @@ public class PieceController : MonoBehaviour
 
     [SerializeField] private LayerMask slotLayer;
     public PieceStatesEnum pieceStatesEnum;
-    private Vector2 originalPosition;
+    public Vector2 originalPosition;
     private Camera _camera;
 
     private void Awake()
@@ -60,6 +60,7 @@ public class PieceController : MonoBehaviour
         {
             pieceStatesEnum = PieceStatesEnum.Snapped;
             int count = 0;
+            KanoodleSlot kanoodle = null;
             foreach (Transform piece in transform)
             {
                 count++;
@@ -71,10 +72,11 @@ public class PieceController : MonoBehaviour
                     Transform slotTr = slot.transform;
                     KanoodleSlot kanoodleSlot = slot.GetComponent<KanoodleSlot>();
                     kanoodleSlot.slotStatesEnum = SlotStatesEnum.Snapped;
-                    kanoodleSlot.UpdateSlots();
                     piece.transform.position = slotTr.transform.position;
+                    kanoodle = kanoodleSlot;
                 }
             }
+            kanoodle.UpdateSlots();
             print(count);
             Debug.Log("The piece is well placed!");
             return;
