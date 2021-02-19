@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc23db772a3bbcd409be4e57ba463294, type: 3}
   m_Name: Brother 1
   m_EditorClassIdentifier: 
-  narration: 
+  narration: I can't solve it. I can't solve it. I can't solve it. It's too <#cc1031>hard!

@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc23db772a3bbcd409be4e57ba463294, type: 3}
   m_Name: Brother 2
   m_EditorClassIdentifier: 
-  narration: 
+  narration: 'Why did I pick the hardest level!? Oh yeah, I lost the puzzle manual
+    and this is the only puzzle I remember. I wish I had it. '
