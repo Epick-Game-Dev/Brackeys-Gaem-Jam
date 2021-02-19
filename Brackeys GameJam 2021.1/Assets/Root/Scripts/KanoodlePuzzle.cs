@@ -34,6 +34,12 @@ public class KanoodlePuzzle : MonoBehaviour
                 piece.transform.position = piece.originalPosition;
                 piece.pieceStatesEnum = PieceStatesEnum.Free;
             }
+            foreach (Transform slot in transform)
+            {
+                KanoodleSlot kanoodleSlot = slot.GetComponent<KanoodleSlot>();
+                kanoodleSlot.slotStatesEnum = SlotStatesEnum.Empty;
+            }
+            piecesToWin = 6;
         }
     }
 }

@@ -59,7 +59,8 @@ public class PieceController : MonoBehaviour
         {
             pieceStatesEnum = PieceStatesEnum.Snapped;
             int count = 0;
-            KanoodleSlot kanoodle = null;
+            KanoodleSlot kanoodle = FindObjectOfType<KanoodleSlot>();
+            kanoodle.UpdateSlots();
             foreach (Transform piece in transform)
             {
                 count++;
@@ -75,7 +76,6 @@ public class PieceController : MonoBehaviour
                     kanoodle = kanoodleSlot;
                 }
             }
-            kanoodle.UpdateSlots();
             print(count);
             Debug.Log("The piece is well placed!");
             return;
