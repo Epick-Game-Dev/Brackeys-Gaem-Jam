@@ -44,7 +44,6 @@ public class PieceController : MonoBehaviour
                 Debug.Log("Can't place here!");
                 return false;
             }
-            kanoodleSlot.slotStatesEnum = SlotStatesEnum.Snapped;
         }
         return true;
     }
