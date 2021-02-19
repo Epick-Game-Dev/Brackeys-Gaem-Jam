@@ -41,5 +41,9 @@ public class KanoodlePuzzle : MonoBehaviour
             }
             piecesToWin = 6;
         }
+        else if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            transform.parent.gameObject.SetActive(false);
+        }
     }
 }

@@ -18,6 +18,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] NarratorSO[] dialogues;
     [SerializeField] TextMeshProUGUI dialogueText;
     [SerializeField] GameObject pressEBox;
+    [SerializeField] private GameObject puzzle;
 
     private void Start()
     {
@@ -124,6 +125,10 @@ public class DialogueManager : MonoBehaviour
             yield return new WaitUntil(() => nextDialogueKeyDown);
             dialogueText.text = " ";
             index++;
+        }
+        if (puzzle != null)
+        {
+            puzzle.SetActive(true);
         }
         EndDialogue();
     }
