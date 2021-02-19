@@ -18,10 +18,7 @@ public class PieceController : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (pieceStatesEnum == PieceStatesEnum.Free)
-        {
-            pieceStatesEnum = PieceStatesEnum.Following;
-        }
+        pieceStatesEnum = PieceStatesEnum.Following;
     }
 
     private bool CanIPlaceThisPieceHere()
@@ -50,11 +47,6 @@ public class PieceController : MonoBehaviour
 
     private void OnMouseUp()
     {
-        if (pieceStatesEnum == PieceStatesEnum.Snapped)
-        {
-            return;
-        }
-
         if (CanIPlaceThisPieceHere())
         {
             pieceStatesEnum = PieceStatesEnum.Snapped;
