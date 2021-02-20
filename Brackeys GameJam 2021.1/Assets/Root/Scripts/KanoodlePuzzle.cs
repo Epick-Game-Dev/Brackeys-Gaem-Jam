@@ -6,6 +6,7 @@ public class KanoodlePuzzle : MonoBehaviour
 {
     [SerializeField] private int piecesToWin;
     [SerializeField] private PieceController[] pieces;
+    [SerializeField] private Animator fade;
 
     private void Awake()
     {
@@ -13,7 +14,7 @@ public class KanoodlePuzzle : MonoBehaviour
         UpdateSlotsToWin();
     }
 
-    public void UpdateSlotsToWin()
+    public IEnumerator UpdateSlotsToWin()
     {
         piecesToWin--;
         if (piecesToWin <= 0)
@@ -21,6 +22,10 @@ public class KanoodlePuzzle : MonoBehaviour
             PlayerStats.currentHappiness += 2;
             HappinessManager.Instance.UpdateHappiness();
             Debug.Log("You Win!");
+            yield return new WaitForSeconds(1);
+            fade.SetBool("Fade Out", true);
+            yield return new WaitForSeconds(0.5f);
+            SceneManagerment.LoadPointsCountScene();
         }
         else
         {

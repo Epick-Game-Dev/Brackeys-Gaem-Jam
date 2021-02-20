@@ -6,6 +6,7 @@ public class PuzzleStart : MonoBehaviour
 {
     private AudioClip song;
     [SerializeField] private Animator catAnimControl;
+    [SerializeField] private Animator camAnimControl;
     private bool canInteract = false;
 
     private void Start()
@@ -60,7 +61,8 @@ public class PuzzleStart : MonoBehaviour
         yield return new WaitForSeconds(1);
         catAnimControl.SetBool("Jump", false);
         yield return new WaitForSeconds(1);
-        player.status = PlayerMovement.PlayerStatus.Free;
-        MusicManager.StartMusic();
+        camAnimControl.SetBool("Fade Out", true);
+        yield return new WaitForSeconds(0.5f);
+        SceneManagerment.LoadPuzzle2();
     }
 }
