@@ -18,6 +18,8 @@ public class KanoodlePuzzle : MonoBehaviour
         piecesToWin--;
         if (piecesToWin <= 0)
         {
+            PlayerStats.currentHappiness += 2;
+            HappinessManager.Instance.UpdateHappiness();
             Debug.Log("You Win!");
         }
         else

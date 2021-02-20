@@ -24,6 +24,10 @@ public class HappinessManager : MonoBehaviour
     public void UpdateHappiness()
     {
         happinessText.text = "Happiness: " + PlayerStats.currentHappiness.ToString();
+        if (PlayerStats.currentHappiness >= PlayerStats.maxHappiness)
+        {
+            happinessText.text = "Happiness: " + "4";
+        }
     }
 
 
