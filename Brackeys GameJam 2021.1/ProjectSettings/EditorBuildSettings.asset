@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Root/Scenes/Puzzle 2.unity
     guid: 8d01f123147d43c49a7022fe3923fad6
+  - enabled: 1
+    path: Assets/Root/Scenes/Counting Points.unity
+    guid: ae62b942093e9fc46a66f83a2243c0fd
   m_configObjects: {}

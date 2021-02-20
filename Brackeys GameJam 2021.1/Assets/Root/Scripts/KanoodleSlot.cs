@@ -15,7 +15,7 @@ public class KanoodleSlot : MonoBehaviour
 
     public void UpdateSlots()
     {
-        kanoodlePuzzle.UpdateSlotsToWin();
+        StartCoroutine(kanoodlePuzzle.UpdateSlotsToWin());
     }
 
     private void OnTriggerEnter2D(Collider2D other)

@@ -11,7 +11,7 @@ public class KanoodlePuzzle : MonoBehaviour
     private void Awake()
     {
         piecesToWin++;
-        UpdateSlotsToWin();
+        StartCoroutine(UpdateSlotsToWin());
     }
 
     public IEnumerator UpdateSlotsToWin()
