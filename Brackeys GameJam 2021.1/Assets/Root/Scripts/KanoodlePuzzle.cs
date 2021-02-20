@@ -25,7 +25,7 @@ public class KanoodlePuzzle : MonoBehaviour
             yield return new WaitForSeconds(1);
             fade.SetBool("Fade Out", true);
             yield return new WaitForSeconds(0.5f);
-            SceneManagerment.LoadPointsCountScene();
+            SceneManagement.LoadPointsCountScene();
         }
         else
         {

@@ -63,6 +63,6 @@ public class PuzzleStart : MonoBehaviour
         yield return new WaitForSeconds(1);
         camAnimControl.SetBool("Fade Out", true);
         yield return new WaitForSeconds(0.5f);
-        SceneManagerment.LoadPuzzle2();
+        SceneManagement.LoadPuzzle2();
     }
 }
