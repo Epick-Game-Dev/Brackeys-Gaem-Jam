@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9106697887931188396}
   - component: {fileID: 5914089655252527883}
   - component: {fileID: 8817077445208663035}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -144,7 +144,7 @@ GameObject:
   - component: {fileID: 7074240792698971708}
   - component: {fileID: 6076029963653705439}
   - component: {fileID: 5231396287636402077}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Press E
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -219,7 +219,7 @@ GameObject:
   - component: {fileID: 6267570690691010594}
   - component: {fileID: 6267570690691010592}
   - component: {fileID: 6267570690691010595}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Chat Bubble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -294,7 +294,7 @@ GameObject:
   - component: {fileID: 6267570691129900295}
   - component: {fileID: 1345280777348044699}
   - component: {fileID: 1447845551}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Dialogue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -336,6 +336,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: fc16b62e88832684589b3dca14f5140a, type: 2}
   dialogueText: {fileID: 6267570691729434679}
   pressEBox: {fileID: 2917074134906068516}
+  puzzle: {fileID: 0}
 --- !u!61 &1447845551
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -374,7 +375,7 @@ GameObject:
   - component: {fileID: 6267570691713238588}
   - component: {fileID: 6267570691713238591}
   - component: {fileID: 6267570691713238590}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -473,7 +474,7 @@ GameObject:
   - component: {fileID: 6267570691729434678}
   - component: {fileID: 6267570691729434676}
   - component: {fileID: 6267570691729434679}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Dialogue Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
