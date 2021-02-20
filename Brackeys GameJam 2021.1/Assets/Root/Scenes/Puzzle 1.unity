@@ -3079,6 +3079,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a70036d77154164ea0714d7339973ce, type: 3}
+--- !u!1001 &1372559790631382646
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1372559792108904488, guid: d26fc27ac24f40d4db814799ae0b6955,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.21677496
+      objectReference: {fileID: 0}
+    - target: {fileID: 1372559792108904488, guid: d26fc27ac24f40d4db814799ae0b6955,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.07181221
+      objectReference: {fileID: 0}
+    - target: {fileID: 1372559792108904488, guid: d26fc27ac24f40d4db814799ae0b6955,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.6253121
+      objectReference: {fileID: 0}
+    - target: {fileID: 1372559792108904488, guid: d26fc27ac24f40d4db814799ae0b6955,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1372559792108904488, guid: d26fc27ac24f40d4db814799ae0b6955,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1372559792108904488, guid: d26fc27ac24f40d4db814799ae0b6955,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1372559792108904488, guid: d26fc27ac24f40d4db814799ae0b6955,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1372559792108904488, guid: d26fc27ac24f40d4db814799ae0b6955,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1372559792108904488, guid: d26fc27ac24f40d4db814799ae0b6955,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1372559792108904488, guid: d26fc27ac24f40d4db814799ae0b6955,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1372559792108904488, guid: d26fc27ac24f40d4db814799ae0b6955,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1372559792108904490, guid: d26fc27ac24f40d4db814799ae0b6955,
+        type: 3}
+      propertyPath: m_Name
+      value: Happiness Manager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d26fc27ac24f40d4db814799ae0b6955, type: 3}
 --- !u!1001 &8835414965071437638
 PrefabInstance:
   m_ObjectHideFlags: 0

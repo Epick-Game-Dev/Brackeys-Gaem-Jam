@@ -170,6 +170,8 @@ public class Piano : MonoBehaviour
             {
                 Debug.Log("You won!");
                 StartCoroutine(FindObjectOfType<PuzzleStart>().EndPuzzle());
+                PlayerStats.currentHappiness += 1;
+                HappinessManager.Instance.UpdateHappiness();
                 Debug.Log("Wwwww");
                 resultIndex = 0;
             }

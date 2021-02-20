@@ -4,6 +4,6 @@ using UnityEngine;
 
 public static class PlayerStats 
 {
-    public static float currentHappiness = 5;
-    public static float maxHappiness = 6;
+    public static float currentHappiness = 0;
+    public static float maxHappiness = 4;
 }
